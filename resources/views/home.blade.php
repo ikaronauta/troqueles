@@ -8,6 +8,18 @@
     <div class="container">
 
         <style>
+            /*---   Migas de Pan   ---*/
+            .migasPan{
+                color: rgb(155, 155, 155);
+            }
+                .migasPan a{
+                    text-decoration: none;
+                    color: rgb(155, 155, 155);
+                }
+                .migasPan a:hover{
+                    color: rgb(20, 94, 30);
+                }
+            /*---   Fin Migas de Pan   ---*/
             #home{
                 line-height : 45px;
                 font-size: 20px;
