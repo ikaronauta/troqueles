@@ -4,48 +4,48 @@
     
 @section('content')
 
-    <style>
-        /*---Botones de acciones tabla index ---*/
-        .btn-img{
-            /*Reduce el tamaño de las imagenes de los botones*/
-            width: 25px;
-        }
-        /*---   Fin Botnes   ---*/
+<style>
+    /*---Botones de acciones tabla index ---*/
+    .btn-img{
+        /*Reduce el tamaño de las imagenes de los botones*/
+        width: 25px;
+    }
+    /*---   Fin Botnes   ---*/
 
-        /*---   Migas de Pan   ---*/
-        .migasPan{
+    /*---   Migas de Pan   ---*/
+    .migasPan{
+        color: rgb(155, 155, 155);
+    }
+        .migasPan a{
+            text-decoration: none;
             color: rgb(155, 155, 155);
         }
-            .migasPan a{
-                text-decoration: none;
-                color: rgb(155, 155, 155);
-            }
-            .migasPan a:hover{
-                color: rgb(20, 94, 30);
-            }
-        /*---   Fin Migas de Pan   ---*/
-
-        /*---   Formulario   ---*/
-        #hov:hover{
-            background-color: #198754 ;
+        .migasPan a:hover{
+            color: rgb(20, 94, 30);
         }
+    /*---   Fin Migas de Pan   ---*/
 
-        #form{
-            background-color: rgb(205, 236, 227);
-        }
+    /*---   Formulario   ---*/
+    #hov:hover{
+        background-color: #198754 ;
+    }
 
-        #form:hover{
-            background-color: rgb(131, 192, 131) ;
-            color: white;
-        }
+    #form{
+        background-color: rgb(205, 236, 227);
+    }
 
-        #home{
-            line-height : 45px;
-            font-size: 20px;
-            margin-top: 30px;
-        }
-        /*---   Fin Formulario   ---*/
-    </style>
+    #form:hover{
+        background-color: rgb(131, 192, 131) ;
+        color: white;
+    }
+
+    #home{
+        line-height : 45px;
+        font-size: 20px;
+        margin-top: 30px;
+    }
+    /*---   Fin Formulario   ---*/
+</style>
 
     <br>
 
@@ -61,8 +61,8 @@
     
     <p><b>*</b>Obligatorio</p>
 
-    <div class="shadow-lg p-3 mb-5 bg-body rounded border border-2 border-success">
-        <form action="/clientes/{{$cliente->id}}" method="post" enctype="multipart/form-data">
+    <div class="shadow-lg p-3 mb-5 bg-body rounded border border-2 border-success" >
+        <form action="/clientes/{{$cliente->id}}" method="post" enctype="multipart/form-data" class="p-3 rounded border border-1 border-success" id="form">
             @method('PUT')
             @csrf
     
