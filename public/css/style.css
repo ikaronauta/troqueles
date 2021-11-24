@@ -1,0 +1,114 @@
+/*---   Home   ---*/
+#home{
+    line-height : 45px;
+    font-size: 20px;
+    margin-top: 30px;
+}
+#content{
+    padding-top: 30px;
+}
+#ibyx{
+    line-height : 62px;
+    font-size: 40px;
+    text-align: justify;
+}
+body{
+    background-color: azure;
+}
+#italic{
+    font-style: italic;
+    color: black;
+}
+#italic a{
+    text-decoration: none;
+}
+.links-marco{
+    color: rgb(12, 12, 12);
+}
+#link-home-uno{
+    background-color: rgb(79, 206, 206);
+}
+#link-home-uno:hover{
+    background-color: #198754;
+    color: white;
+}
+#link-home-dos{
+    background-color: rgb(180, 202, 80);
+}
+#link-home-dos:hover{
+    background-color: #198754;
+    color: white;
+}
+#link-home-tres{
+    background-color: rgb(209, 125, 123);
+}
+#link-home-tres:hover{
+    background-color: #198754;
+    color: white;
+}
+#ibyx{
+    color: gray;
+    font-size: small;
+    margin-bottom: 2px;
+}
+/*---   Fin Home   ---*/
+
+/*¨---   Lateral   ---*/
+b, small{
+    color: red;
+}
+html, body {  
+    margin:0px;  
+    height:100%;  
+}
+
+#row{
+    height: 100%;
+}
+
+#lateral{
+    background-color: rgb(131, 192, 131);
+}
+
+li{
+    list-style: none;
+}
+
+#hov:hover{
+    background-color: #198754 ;
+}
+
+#fixed-top{
+    width: 15%;
+    padding-top: 50px;
+}
+
+#content{
+    padding-top: 30px;
+}
+
+body{
+    background-color: azure;
+}
+/*---   Fin Lateral   ---*/
+
+
+/*---Botones de acciones tabla index ---*/
+.btn-img{
+    /*Reduce el tamaño de las imagenes de los botones*/
+    width: 25px;
+}
+/*-Fin migas de pan-*/
+
+/*---   Migas de Pan   ---*/
+.migasPan{
+    color: rgb(155, 155, 155);
+}
+    .migasPan a{
+        text-decoration: none;
+        color: rgb(155, 155, 155);
+    }
+    .migasPan a:hover{
+        color: rgb(20, 94, 30);
+    }
+/*---   Fin Migas de Pan   ---*/

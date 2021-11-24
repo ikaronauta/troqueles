@@ -3,20 +3,12 @@
 @section('title', 'Home')
 
 @section('content')
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
     <div class="container">
 
         <style>
-            .migasPan{
-                color: rgb(155, 155, 155);
-                }
-                    .migasPan a{
-                        text-decoration: none;
-                        color: rgb(155, 155, 155);
-                    }
-                    .migasPan a:hover{
-                        color: rgb(20, 94, 30);
-                    }
+            
             #home{
                 line-height : 45px;
                 font-size: 20px;

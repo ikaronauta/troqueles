@@ -1,41 +1,4 @@
-<style>
-    b, small{
-        color: red;
-    }
-    html, body {  
-        margin:0px;  
-        height:100%;  
-    }
-    
-    #row{
-        height: 100%;
-    }
-
-    #lateral{
-        background-color: rgb(131, 192, 131);
-    }
-
-    li{
-        list-style: none;
-    }
-
-    #hov:hover{
-        background-color: #198754 ;
-    }
-
-    #fixed-top{
-        width: 15%;
-        padding-top: 50px;
-    }
-
-    #content{
-        padding-top: 30px;
-    }
-
-    body{
-        background-color: azure;
-    }
-</style>
+<link rel="stylesheet" href="{{asset('css/style.css')}}">
 
 <div class="fixed-top m-2" id="fixed-top">
     <!--Inicio-->
@@ -66,7 +29,7 @@
             Clientes
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Listado Clientes</a></li>
+            <li><a class="dropdown-item" href="/clientes">Listado Clientes</a></li>
             
             <li><a class="dropdown-item" href="#">Nuevo CLiente</a></li>
             
