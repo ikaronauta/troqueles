@@ -3,7 +3,27 @@
 @section('title', 'Clientes')
 
 @section('content')
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">        
+    <style>
+        /*---Botones de acciones tabla index ---*/
+        .btn-img{
+            /*Reduce el tamaño de las imagenes de los botones*/
+            width: 25px;
+        }
+        /*---   Fin Botnes   ---*/
+
+        /*---   Migas de Pan   ---*/
+        .migasPan{
+            color: rgb(155, 155, 155);
+        }
+            .migasPan a{
+                text-decoration: none;
+                color: rgb(155, 155, 155);
+            }
+            .migasPan a:hover{
+                color: rgb(20, 94, 30);
+            }
+        /*---   Fin Migas de Pan   ---*/
+    </style>        
 
     <br>
     <!--Mensaje Confirmacion-->

@@ -8,7 +8,6 @@
     <div class="container">
 
         <style>
-            
             #home{
                 line-height : 45px;
                 font-size: 20px;
@@ -61,7 +60,9 @@
                 font-size: small;
                 margin-bottom: 2px;
             }
+            
         </style>
+        
         <br>
 
         <div class="migasPan">
