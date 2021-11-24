@@ -1,8 +1,8 @@
 @extends('layouts.base')
 
-@section('title', 'Crear Cliente')
+@section('title', 'Editar CLiente')
     
-@section('content')   
+@section('content')
 
     <style>
         /*---Botones de acciones tabla index ---*/
@@ -55,15 +55,15 @@
         </a>
         > 
         <a href="/clientes">
-            Nuevo Cliente
+            Editar Cliente
         </a>
-    </div>           
-
+    </div> 
+    
     <p><b>*</b>Obligatorio</p>
 
-    <div class="shadow-lg p-3 bg-body rounded border border-2 border-success">    
-        
-        <form action="/clientes" method="post" enctype="multipart/form-data" class="p-3 rounded border border-1 border-success" id="form">    
+    <div class="shadow-lg p-3 mb-5 bg-body rounded border border-2 border-success">
+        <form action="/clientes/{{$cliente->id}}" method="post" enctype="multipart/form-data">
+            @method('PUT')
             @csrf
     
             <!--Primera fila del formulario-->
@@ -73,7 +73,9 @@
                     <label for="tipoDocumento" class="form-label"><b>*</b>Tipo de Documento</label>
                     <select class="form-control" name="tipoDocumento" id="tipoDocumento">
                         @foreach($tipoDocumentos as $tipoDocumento)
-                            <option value="{{ $tipoDocumento->id }}">{{ $tipoDocumento->tipo_documento }}</option>
+                            <option value="{{ $tipoDocumento->id }}" @if ($tipoDocumento->id == $cliente->tipo_documento) selected @endif>
+                                {{ $tipoDocumento->tipo_documento }}                      
+                            </option>
                         @endforeach
                     </select>
                 </div>
@@ -81,7 +83,7 @@
                 <!--Columna 2-->
                 <div class="col">
                     <label for="numeroDocumento" class="form-label"><b>*</b>Número de Documento</label>
-                    <input type="number" class="form-control" id="numeroDocumento" name="numeroDocumento" value="{{ old('numeroDocumento') }}">
+                    <input type="number" class="form-control" id="numeroDocumento" name="numeroDocumento" value="{{ $cliente->documento_cliente}}">
                     @error('numeroDocumento')
                         <small>{{ $message }}</small>
                     @enderror
@@ -90,7 +92,7 @@
                 <!--Columna 3-->
                 <div class="col">
                     <label for="nombre" class="form-label"><b>*</b>Nombre Cliente ó Negocio</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" value="{{ old('nombre') }}">
+                    <input type="text" class="form-control" id="nombre" name="nombre" value="{{ $cliente->nombre_cliente }}">
                     @error('nombre')
                         <small>{{ $message }}</small>
                     @enderror
@@ -104,7 +106,9 @@
                     <label for="municipio" class="form-label"><b>*</b>Municipio</label>
                     <select class="form-control" id="municipio" name="municipio">
                         @foreach($municipios as $municipio)
-                            <option value="{{ $municipio->id }}">{{ $municipio->nombre_municipio }}</option>
+                            <option value="{{ $municipio->id }}" @if ($municipio->id == $cliente->municipio_cliente) selected @endif>                          
+                                {{ $municipio->nombre_municipio }}
+                            </option>
                         @endforeach
                     </select>
                 </div>
@@ -112,7 +116,7 @@
                 <!--Columna 2-->
                 <div class="col">
                     <label for="telefono" class="form-label"><b>*</b>Telefono</label>
-                    <input type="number" class="form-control" id="telefono" name="telefono" value="{{ old('telefono') }}">
+                    <input type="number" class="form-control" id="telefono" name="telefono" value="{{ $cliente->telefono_cliente }}">
                     @error('telefono')
                         <small>{{ $message }}</small>
                     @enderror
@@ -121,7 +125,7 @@
                 <!--Columna 3-->
                 <div class="col">
                     <label for="direccion" class="form-label"><b>*</b>Dirección</label>
-                    <input type="text" class="form-control" id="direccion" name="direccion" value="{{ old('direccion') }}">
+                    <input type="text" class="form-control" id="direccion" name="direccion" value="{{ $cliente->direccion_cliente }}">
                     @error('direccion')
                         <small>{{ $message }}</small>
                     @enderror
@@ -133,7 +137,7 @@
                 <!--Columna 1-->
                 <div class="col">
                     <label for="correo" class="form-label"><b>*</b>Correo Electronico</label>
-                    <input type="text" class="form-control" id="correo" name="correo" value="{{ old('correo') }}">
+                    <input type="text" class="form-control" id="correo" name="correo" value="{{ $cliente->correo_cliente }}">
                     @error('correo')
                         <small>{{ $message }}</small>
                     @enderror
@@ -141,7 +145,7 @@
                 
                 <!--Columna 2-->
                 <div class="col">
-                    <label for="logo" class="form-label">Imagen</label>
+                    <label for="logo" class="form-label">Logotipo</label>
                     <input type="file" name="logo" id="logo" class="form-control">
                     @error('logo')
                         <small>{{ $message }}</small>
@@ -153,12 +157,13 @@
                 <div class="col"></div>
     
                 <div class="col-auto">
-                    <button class="btn btn-success btn-lg" type="submit">Guardar</button>
-                    <a href="/clientes" class="btn btn-dark btn-lg">Cancelar</a>    
+                    <button class="btn btn-success btn-lg" type="submit">Actualizar</button>
+                    <a href="/clientes" class="btn btn-dark btn-lg">Cancelar</a>
+                    
                 </div>
     
                 <div class="col"></div>
             </div>
         </form>
-    </div> 
+    </div>
 @endsection

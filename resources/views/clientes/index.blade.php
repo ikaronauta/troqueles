@@ -39,6 +39,8 @@
         </a> 
     </div>
 
+    <a href="/clientes/create" class="btn btn-success m-1">Nuevo Cliente</a>
+
     <div class="shadow-lg p-3 mb-5 bg-body rounded border border-2 border-success">
         <table class="table table-hover">
             <thead class="bg-success text-light">
