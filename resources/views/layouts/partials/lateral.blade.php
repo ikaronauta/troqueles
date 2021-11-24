@@ -68,7 +68,7 @@
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="/clientes">Listado Clientes</a></li>
             
-            <li><a class="dropdown-item" href="#">Nuevo CLiente</a></li>
+            <li><a class="dropdown-item" href="/clientes/create">Nuevo CLiente</a></li>
             
         </ul>
     </li>
