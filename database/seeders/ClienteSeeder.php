@@ -126,11 +126,11 @@ class ClienteSeeder extends Seeder
         $cliente = new Cliente();
         $cliente->tipo_documento = 2;
         $cliente->documento_cliente = 32272993;
-        $cliente->nombre_cliente = 'Todo Partes Alex';
-        $cliente->municipio_cliente = 6;
-        $cliente->telefono_cliente = '654567';
-        $cliente->direccion_cliente = 'Cr 6 # 121-23';
-        $cliente->correo_cliente = 'contacto@todopartes.com';
+        $cliente->nombre_cliente = 'Autopartes Speed';
+        $cliente->municipio_cliente = 4;
+        $cliente->telefono_cliente = '54354534';
+        $cliente->direccion_cliente = 'Cr 43 # 10-36';
+        $cliente->correo_cliente = 'contacto@speed.com';
         $cliente->logo_cliente = 'default-circulo.png';
         $cliente->save();
 
