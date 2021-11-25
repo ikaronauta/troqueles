@@ -55,8 +55,8 @@
             Usuarios
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/usuarios">Listado Usuarios</a></li>
-            <li><a class="dropdown-item" href="/usuarios/create">Nuevo Usuario</a></li>
+                <li><a class="dropdown-item" href="/users">Listado Usuarios</a></li>
+                <li><a class="dropdown-item" href="/register">Nuevo Usuario</a></li>
             </ul>
         </li>      
     @endif
