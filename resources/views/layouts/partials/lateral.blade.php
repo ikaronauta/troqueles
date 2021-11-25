@@ -82,7 +82,7 @@
             Troqueles
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/troqueles">Litado Troqueles</a></li>
+            <li><a class="dropdown-item" href="/troqueles">Listado Troqueles</a></li>
             @if (Auth::user()->rol == 1 || Auth::user()->rol == 2)
                 <li><a class="dropdown-item" href="/troqueles/create">Nuevo Troquel</a></li>              
             @endif
