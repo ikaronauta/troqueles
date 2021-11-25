@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\TroquelesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,5 @@ use App\Http\Controllers\ClientesController;
 Route::get('/', [HomeController::class, 'index'])->middleware('auth');
 
 Route::resource('clientes', ClientesController::class)->middleware('auth');
+
+Route::resource('troqueles', TroquelesController::class)->middleware('auth');

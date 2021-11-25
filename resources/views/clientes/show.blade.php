@@ -27,7 +27,6 @@
     </style>
 
     <br>
-
     <div class="migasPan">
         <a href="/clientes">
             Clientes
@@ -42,7 +41,7 @@
     <div class="shadow-lg p-3 mb-3 bg-body rounded border border-2 border-success">
         <div class="row">
             <div class="col-sm-4">
-                <img src="{{ asset('img/clientes/' . $cliente->logo_cliente) }}" alt="Logo {{ $cliente->nombre_cliente }}" style="width: 250px">
+                <img src="{{ asset('img/clientes/' . $cliente->logo_cliente) }}" alt="Logo {{ $cliente->nombre_cliente }}" style="width: 250px" class="m-5">
             </div>
         
             <div class="col-sm-8">
