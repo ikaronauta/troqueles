@@ -94,7 +94,7 @@
                     <tr>
                         <th scope="row">{{$troquelCliente->id}}</th>
                         <td>{{$troquelCliente->tipotroquel->tipo_troquel}}</td>
-                        <td>{{$troquelCliente->tipotroquel->valor_troquel}}</td>
+                        <td><b>{{$troquelCliente->tipotroquel->valor_troquel}}</b></td>
                         <td>{{$troquelCliente->estado->nombre_estado}}</td>
                         <td>
                             <a href="/troqueles/{{$troquelCliente->id}}" class="btn btn-outline-light btn-sm">

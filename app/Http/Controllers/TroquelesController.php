@@ -18,7 +18,7 @@ class TroquelesController extends Controller
      */
     public function index()
     {
-        $troqueles = Troquel::all();
+        $troqueles = Troquel::orderBy('id', 'desc')->simplePaginate(10);
         return view('troqueles.index')
                     ->with('troqueles', $troqueles);
     }
