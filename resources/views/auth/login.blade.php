@@ -24,13 +24,13 @@
         }
     </style>
 
-    <div class="container mt-2">
-        <div class="row">
+    <div class="container mt-5">
+        <div class="row m-3 p-0">
             <div class="col"></div>
-            <div class="col">
-                <a class="navbar-brand text-dark fs-2" href="/">
-                    <p class="text-center">
-                        <img src="{{asset('img/favicon.ico')}}" alt="TroquelesJC" class="d-inline-block align-text-top">
+            <div class="m-0 p-0">
+                <a class="navbar-brand text-dark fs-2 m-0 p-0" href="/">
+                    <p class="text-center m-0 p-0">
+                        <img src="{{asset('img/favicon.ico')}}" alt="TroquelesJC" class="d-inline-block align-text-top m-0 p-0">
                         Troqueles<b class="fs-1">JC</b>
                     </p>                    
                 </a>
@@ -38,13 +38,6 @@
             <div class="col"></div>
         </div>
     </div>
-    
-
-    @if(session('status'))
-        <div class="alert alert-success">
-            {{ session('status')}}
-        </div>
-    @endif
  
     <div class="row">
         <div class="col"></div>
