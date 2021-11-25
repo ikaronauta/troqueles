@@ -12,6 +12,18 @@
     <title>TroquelesJC | Login</title>
   </head>
   <body>
+
+    <style>
+        b{
+            color: red;
+        }
+        #ibyx{
+            color: gray;
+            font-size: small;
+            margin-bottom: 2px;
+        }
+    </style>
+
     <div class="container mt-2">
         <div class="row">
             <div class="col"></div>
