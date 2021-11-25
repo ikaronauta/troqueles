@@ -30,7 +30,7 @@
             <div class="col">
                 <a class="navbar-brand text-dark fs-2" href="/">
                     <p class="text-center">
-                        <img src="{{asset('img/favicon.ico')}}" alt="" width="45" class="d-inline-block align-text-top">
+                        <img src="{{asset('img/favicon.ico')}}" alt="TroquelesJC" class="d-inline-block align-text-top">
                         Troqueles<b class="fs-1">JC</b>
                     </p>                    
                 </a>
@@ -49,7 +49,7 @@
     <div class="row">
         <div class="col"></div>
         
-        <div class="col border border-3 rounded shadow-lg p-3 mb-5 bg-body">
+        <div class="border border-3 rounded shadow-lg p-3 mb-4 bg-body" style="width: 400px">
             <div class="bg-success p-3 rounded">
                 <table class="table caption-top center">
                     <caption>
