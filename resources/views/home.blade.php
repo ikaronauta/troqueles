@@ -44,7 +44,7 @@
                 text-decoration: none;
             }
             .links-marco{
-                color: rgb(12, 12, 12);
+                color: white;
             }
             #link-home-uno{
                 background-color: rgb(79, 206, 206);
@@ -76,7 +76,6 @@
         </style>
         
         <br>
-
         <div class="migasPan">
             <a href="/" id="active">
                 Pagina de Inicio
@@ -84,31 +83,37 @@
         </div>
         
         <div class="row links-marco">
-            <div class="col p-4 m-4 fs-3 border border-dark border-2 rounded shadow" id="link-home-uno">
+            <div class="col p-4 m-4 fs-3 border border-3 rounded shadow" id="link-home-uno">
                 <div class="row">
                     <div class="col-8">                        
-                        <img src="{{asset('img/icons/users.png')}}" alt="" style="width: 35px">
+                        <img src="{{asset('img/icons/user-white.png')}}" alt="" style="width: 30px">
                         Usuarios                        
                     </div>
-                    
+                    <div class="col-2">
+                        {{$usuarios}}
+                    </div> 
                 </div>                
             </div>
-            <div class="col p-4 m-4 fs-3 border border-dark border-2 rounded shadow" id="link-home-dos">
+            <div class="col p-4 m-4 fs-3 border border-3 rounded shadow" id="link-home-dos">
                 <div class="row">
                     <div class="col-8">
-                        <img src="{{asset('img/icons/star.png')}}" alt="" style="width: 30px">
+                        <img src="{{asset('img/icons/team-white.png')}}" alt="" style="width: 40px">
                         Clientes                        
                     </div>
-                    
+                    <div class="col-2">
+                        {{$clientes}}
+                    </div>                    
                 </div>
             </div>
-            <div class="col p-4 m-4 fs-3 border border-dark border-2 rounded shadow" id="link-home-tres">
+            <div class="col p-4 m-4 fs-3 border border-3 rounded shadow" id="link-home-tres">
                 <div class="row">
                     <div class="col-8">                      
-                        <img src="{{asset('img/icons/codesandbox.png')}}" alt="" style="width: 30px">
+                        <img src="{{asset('img/icons/box-white.png')}}" alt="" style="width: 35px">
                         Troqueles
                     </div>
-                    
+                    <div class="col-2">
+                        {{$troqueles}}
+                    </div>
                 </div>
             </div>
         </div>
