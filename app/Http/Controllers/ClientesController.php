@@ -120,8 +120,7 @@ class ClientesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(UpdateClienteRequest $request, $id)
-    {
-        
+    {        
         $cliente = Cliente::find($id);
 
         $cliente->tipo_documento = $request->tipoDocumento;
@@ -135,9 +134,12 @@ class ClientesController extends Controller
         if ($request->hasFile('logo'))
         {
             $file = $request->file('logo');
-            $logo = $cliente->logo_cliente;
+            $logo = time() . $file->getClientOriginalName();
             $file->move("img/clientes", $logo);
-        }        
+        }  
+
+        $cliente->logo_cliente = $logo;
+            
         $cliente->save();
         
         return redirect()->route('clientes.index')->with('status', 'Cliente actualizado satisfactoriamente');
