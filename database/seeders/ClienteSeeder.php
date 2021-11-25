@@ -179,7 +179,7 @@ class ClienteSeeder extends Seeder
         $cliente->telefono_cliente = '43535435';
         $cliente->direccion_cliente = 'cl 110 # 34-26';
         $cliente->correo_cliente = 'contacto@cafequindio.com';
-        $cliente->logo_cliente = 'saferbo.jpg';
+        $cliente->logo_cliente = 'cafequindio.png';
         $cliente->save();
 
         //Club Manizales
