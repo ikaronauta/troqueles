@@ -57,7 +57,7 @@
                     @csrf
     
                     @if (Auth::user()->rol == 1 || Auth::user()->rol == 2)                  
-                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                        <button type="submit" class="btn btn-danger" onclick="return ConfirmDelete()">Eliminar</button>
                         <a href="/clientes/{{$cliente->id}}/edit" class="btn btn-outline-warning">Modificar</a>  
                     @endif                   
                     
@@ -109,7 +109,7 @@
                                 <form class="delete d-line" action="/troqueles/{{$troquelCliente->id}}" method="POST" style="display: inline">
                                     @method('DELETE')
                                     @csrf
-                                    <button type="submit" class="btn btn-outline-light btn-sm">
+                                    <button type="submit" class="btn btn-outline-light btn-sm" onclick="return ConfirmDelete()">
                                         <img src="{{asset('img/icons/trash-2.png')}}" alt="Eliminar" class="btn-img">
                                     </button>
                                 </form>
@@ -120,5 +120,21 @@
             </tbody>
         </table>
     </div>
+
+    <script>
+        function ConfirmDelete()
+        {
+            var respuesta = confirm("¿Está seguro de querer eliminar este registro?");
+
+            if (respuesta == true) 
+            {
+                return true;  
+            }
+            else
+            {
+                return false;
+            }
+        }
+    </script>
     
 @endsection

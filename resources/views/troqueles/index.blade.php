@@ -76,7 +76,7 @@
                                 <form class="delete d-line" action="/troqueles/{{$troquel->id}}" method="POST" style="display: inline">
                                     @method('DELETE')
                                     @csrf
-                                    <button type="submit" class="btn btn-outline-light btn-sm">
+                                    <button type="submit" class="btn btn-outline-light btn-sm" onclick="return ConfirmDelete()">
                                         <img src="{{asset('img/icons/trash-2.png')}}" alt="Eliminar" class="btn-img">
                                     </button>
                                 </form>
@@ -87,5 +87,21 @@
             </tbody>
           </table>
     </div>
+
+    <script>
+        function ConfirmDelete()
+        {
+            var respuesta = confirm("¿Está seguro de querer eliminar este registro?");
+
+            if (respuesta == true) 
+            {
+                return true;  
+            }
+            else
+            {
+                return false;
+            }
+        }
+    </script>
       
 @endsection

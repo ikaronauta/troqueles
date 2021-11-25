@@ -57,7 +57,7 @@
                     @csrf
     
                     @if (Auth::user()->rol == 1 || Auth::user()->rol == 2)
-                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                        <button type="submit" class="btn btn-danger" onclick="return ConfirmDelete()">Eliminar</button>
                         <a href="/troqueles/{{$troquel->id}}/edit" class="btn btn-outline-warning">Modificar</a> 
                     @endif
                     
@@ -66,4 +66,21 @@
             </div>                       
         </div>
     </div>
+
+    <script>
+        function ConfirmDelete()
+        {
+            var respuesta = confirm("¿Está seguro de querer eliminar este registro?");
+
+            if (respuesta == true) 
+            {
+                return true;  
+            }
+            else
+            {
+                return false;
+            }
+        }
+    </script>
+
 @endsection

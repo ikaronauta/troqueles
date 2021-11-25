@@ -96,7 +96,7 @@
     <script>
         function ConfirmDelete()
         {
-            var respuesta = confirm("Esta seguro de eliminar este registro");
+            var respuesta = confirm("¿Está seguro de querer eliminar este registro?");
 
             if (respuesta == true) 
             {
@@ -108,6 +108,5 @@
             }
         }
     </script>
-
     
 @endsection
