@@ -47,17 +47,19 @@
     </li>
     <hr>
 
-    <!--Usuarios-->
-    <li class="nav-item rounded dropdown mt-4" id="hov">
-        <a class="nav-link dropdown-toggle text-light fs-4" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <img src="{{asset('img/icons/usuario.png')}}" alt="" style="width: 40px">
-          Usuarios
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="/usuarios">Listado Usuarios</a></li>
-          <li><a class="dropdown-item" href="/usuarios/create">Nuevo Usuario</a></li>
-        </ul>
-    </li>      
+    @if (Auth::user()->rol == 1)
+        <!--Usuarios-->
+        <li class="nav-item rounded dropdown mt-4" id="hov">
+            <a class="nav-link dropdown-toggle text-light fs-4" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="{{asset('img/icons/usuario.png')}}" alt="" style="width: 40px">
+            Usuarios
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/usuarios">Listado Usuarios</a></li>
+            <li><a class="dropdown-item" href="/usuarios/create">Nuevo Usuario</a></li>
+            </ul>
+        </li>      
+    @endif
 
     <!--Clientes-->
     <li class="nav-item rounded dropdown mt-4" id="hov">
@@ -67,9 +69,9 @@
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="/clientes">Listado Clientes</a></li>
-            
-            <li><a class="dropdown-item" href="/clientes/create">Nuevo CLiente</a></li>
-            
+            @if (Auth::user()->rol == 1 || Auth::user()->rol == 2)
+                <li><a class="dropdown-item" href="/clientes/create">Nuevo CLiente</a></li>
+            @endif
         </ul>
     </li>
 
@@ -81,9 +83,9 @@
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">Litado Troqueles</a></li>
-            
-            <li><a class="dropdown-item" href="#">Nuevo Troquel</a></li>              
-            
+            @if (Auth::user()->rol == 1 || Auth::user()->rol == 2)
+                <li><a class="dropdown-item" href="/troqueles/create">Nuevo Troquel</a></li>              
+            @endif
         </ul>
     </li>
 
@@ -94,10 +96,10 @@
         Manuales
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <li><a class="dropdown-item" href="#">Manual de Usuario</a></li>
-        
-            <li><a class="dropdown-item" href="#">Manual Tecnico</a></li>              
-        
+            <li><a class="dropdown-item" href="{{asset('doc/Manual_Usuario.pdf')}}">Manual de Usuario</a></li>
+            @if (Auth::user()->rol == 1 || Auth::user()->rol == 2)
+              <li><a class="dropdown-item" href="/troqueles/create">Manual Tecnico</a></li>              
+            @endif
         </ul>
     </li>
 </div>

@@ -39,7 +39,9 @@
         </a> 
     </div>
 
-    <a href="/clientes/create" class="btn btn-success m-1">Nuevo Cliente</a>
+    @if (Auth::user()->rol == 1 || Auth::user()->rol == 2)
+        <a href="/clientes/create" class="btn btn-success m-1">Nuevo Cliente</a>        
+    @endif
 
     <div class="shadow-lg p-3 mb-5 bg-body rounded border border-2 border-success">
         <table class="table table-hover">
@@ -66,7 +68,7 @@
                                 <img src="{{asset('img/icons/eye.png')}}" alt="Ver" class="btn-img">
                             </a>
     
-
+                            @if (Auth::user()->rol == 1 || Auth::user()->rol == 2)
                                 <a href="/clientes/{{$cliente->id}}/edit" class="btn btn-outline-light btn-sm">
                                     <img src="{{asset('img/icons/refresh-cw.png')}}" alt="Editar" class="btn-img">
                                 </a>
@@ -78,7 +80,7 @@
                                         <img src="{{asset('img/icons/trash-2.png')}}" alt="Eliminar" class="btn-img">
                                     </button>
                                 </form> 
-
+                            @endif
                         </td>
                     </tr>
                 @endforeach

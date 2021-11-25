@@ -57,10 +57,10 @@
                     @method('DELETE')
                     @csrf
     
-                  
+                    @if (Auth::user()->rol == 1 || Auth::user()->rol == 2)                  
                         <button type="submit" class="btn btn-danger">Eliminar</button>
                         <a href="/clientes/{{$cliente->id}}/edit" class="btn btn-outline-warning">Modificar</a>  
-                   
+                    @endif                   
                     
                     <a href="/clientes" class="btn btn-outline-primary">Regresar</a>
                 </form>               
@@ -69,10 +69,10 @@
     </div>   
     
     <!--Boton para crear troquel-->
-
+    @if (Auth::user()->rol == 1)
         <a href="/troqueles/create" class="btn btn-success float-start m-1">Nuevo Troquel</a>
         <br>
-
+    @endif
 
     <table class="table caption-top">
         <caption>Troqueles de {{$cliente->nombre_cliente}}</caption>        
@@ -102,7 +102,7 @@
                                 <img src="{{asset('img/icons/eye.png')}}" alt="Ver" class="btn-img">
                             </a>
 
-                            
+                            @if (Auth::user()->rol == 1 || Auth::user()->rol == 2)                            
                                 <a href="/troqueles/{{$troquelCliente->id}}/edit" class="btn btn-outline-light btn-sm">
                                     <img src="{{asset('img/icons/refresh-cw.png')}}" alt="Editar" class="btn-img">
                                 </a>
@@ -114,7 +114,7 @@
                                         <img src="{{asset('img/icons/trash-2.png')}}" alt="Eliminar" class="btn-img">
                                     </button>
                                 </form>
-                         
+                            @endif                         
                         </td>
                     </tr>                
                 @endforeach

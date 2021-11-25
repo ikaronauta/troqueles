@@ -32,6 +32,9 @@ class ClientesController extends Controller
      */
     public function create()
     {
+        if (Auth::user()->rol == 3) {
+            return redirect()->route('clientes.index');
+        }
 
         $tipoDocumentos = Tipodocumento::all();
         $municipios = Municipio::all();
@@ -95,6 +98,9 @@ class ClientesController extends Controller
      */
     public function edit($id)
     {
+        if (Auth::user()->rol == 3) {
+            return redirect()->route('clientes.index');
+        }
         
         $cliente = Cliente::find($id);
         $tipoDocumentos = Tipodocumento::all();
