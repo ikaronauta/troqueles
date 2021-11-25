@@ -51,21 +51,17 @@ class ClientesController extends Controller
      */
     public function store(StoreClienteRequest $request)
     {
-        $cliente = new Cliente();
-
         if ($request->hasFile('logo'))
         {
             $file = $request->file('logo');
             $logo = time() . $file->getClientOriginalName();
             $file->move("img/clientes", $logo);
-            $cliente->logo_cliente = $logo;
         }else
             {
                 $logo = "default-circulo.png";
-                $cliente->logo_cliente = $logo;
             }
 
-        
+        $cliente = new Cliente();
         $cliente->tipo_documento = $request->tipoDocumento;
         $cliente->documento_cliente = $request->numeroDocumento;
         $cliente->nombre_cliente = $request->nombre;
@@ -73,7 +69,7 @@ class ClientesController extends Controller
         $cliente->telefono_cliente = $request->telefono;
         $cliente->direccion_cliente = $request->direccion;
         $cliente->correo_cliente = $request->correo;
-        
+        $cliente->logo_cliente = $logo;
         $cliente->save();
         
         return redirect()->route('clientes.index')->with('status', 'Cliente creado satisfactoriamente');
