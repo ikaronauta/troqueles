@@ -12,7 +12,11 @@
   </head>
   <body>
 
-    @include('layouts.partials.navbar')
+    @guest
+      @include('layouts.partials.navbar-nolog')  
+    @else
+      @include('layouts.partials.navbar-log')
+    @endguest
    
     <div class="container-fluid" id="row">
 
