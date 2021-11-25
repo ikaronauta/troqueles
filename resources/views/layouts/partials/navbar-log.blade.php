@@ -10,7 +10,7 @@
         
       </ul>
 
-      <a class="nav-link disabled text-warning" href="{{ Auth::user()->name }}">Usuario</a>
+      <a class="nav-link disabled text-warning" href="#">{{ Auth::user()->name }}</a>
       
       <div style="margin-right: 10%">        
         <form class="form-inline my-2 my-lg-0" action="{{ route('logout') }}" method="post">

@@ -13,6 +13,49 @@
   </head>
   <body>
 
+    <style>
+        /*---Botones de acciones tabla index ---*/
+        .btn-img{
+            /*Reduce el tamaño de las imagenes de los botones*/
+            width: 25px;
+        }
+        /*---   Fin Botnes   ---*/
+
+        /*---   Migas de Pan   ---*/
+        .migasPan{
+            color: rgb(155, 155, 155);
+        }
+            .migasPan a{
+                text-decoration: none;
+                color: rgb(155, 155, 155);
+            }
+            .migasPan a:hover{
+                color: rgb(20, 94, 30);
+            }
+        /*---   Fin Migas de Pan   ---*/
+
+        /*---   Formulario   ---*/
+        #hov:hover{
+            background-color: #198754 ;
+        }
+
+        #form{
+            background-color: rgb(205, 236, 227);
+        }
+
+        #form:hover{
+            background-color: rgb(131, 192, 131) ;
+            color: white;
+        }
+
+        #home{
+            line-height : 45px;
+            font-size: 20px;
+            margin-top: 30px;
+        }
+        /*---   Fin Formulario   ---*/
+    </style>
+
     <div class="container">
         <br>
     <div class="migasPan mb-3">
