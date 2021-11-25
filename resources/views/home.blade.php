@@ -78,7 +78,8 @@
             }
             #tarjeta{
                 width: 50%;
-                margin-left: 20%
+                margin-left: 20%;
+                margin-top: 10px;
             }            
         </style>
         
