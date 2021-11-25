@@ -72,7 +72,14 @@
                 font-size: small;
                 margin-bottom: 2px;
             }
-            
+            #perfil{
+                width: 100%;
+                border-radius: 50%
+            }
+            #tarjeta{
+                width: 50%;
+                margin-left: 20%
+            }            
         </style>
         
         <br>
@@ -131,7 +138,7 @@
                         El presente Sistema de Información titulado SISTMA DE REGISTRO Y CONTROL 
                         FABRICA DE TROQUELES JC, tiene como finalidad facilitar la gestión 
                         operativa de la empresa, agilizando los procesos de registro y control
-                        en la etapa de produccion.                         
+                        en la etapa de producción.                         
                     </p>
                 </div>
             </div>           
@@ -149,13 +156,27 @@
             <div class="col-5 p-3">
                 <img src="{{asset('img/laptop.png')}}" alt="" style="width: 75%">
             </div>
-        </div>
+        </div> 
 
+        <div class="shadow-lg p-3 mb-5 bg-body rounded border mt-3">
+
+            <div class="row">
+                <div class="col-5 p-3">
+                    <img src="{{asset('img/perfil.jpg')}}" alt="" id="perfil">
+                </div>
+
+                <div class="col">
+                    <p class="p-4" id="home">
+                        Sistema desarrollado por Julian Andres Ortiz, 
+                        Programador Junior egresado del Sena en Análisis 
+                        y Desarrollo de Sistemas de Información.                         
+                    </p>
+                    <img src="{{asset('img/tarjeta.jpg')}}" alt="Tarjeta Julian Ortiz" id="tarjeta">
+                </div>
+            </div>           
+        </div>
         
-          
-        <a href="https//ibyx.com.co">
-            <img src="{{asset('img/ibyx.png')}}" alt="">
-        </a>         
+                 
         
     </div>    
     

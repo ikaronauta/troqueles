@@ -15,7 +15,7 @@
       <div style="margin-right: 10%">        
         <form class="form-inline my-2 my-lg-0" action="{{ route('logout') }}" method="post">
           @csrf
-          <button class="btn btn-outline- my-2 my-lg-0 text-light" type="submit">Cerrar sesion</button>
+          <button class="btn btn-outline- my-2 my-lg-0 text-light" type="submit">Cerrar Sesión</button>
         </form>
       </div>
         

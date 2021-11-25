@@ -46,7 +46,7 @@
             <div class="bg-success p-3 rounded">
                 <table class="table caption-top center">
                     <caption>
-                        <p class="text-center text-light">Inicio de Sesion</p>
+                        <p class="text-center text-light">Inicio de Sesión</p>
                     </caption>        
                 </table>
     
