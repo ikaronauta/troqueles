@@ -24,7 +24,7 @@
                 color: rgb(20, 94, 30);
             }
         /*---   Fin Migas de Pan   ---*/
-    </style>        
+    </style> 
 
     <br>
     <!--Mensaje Confirmacion-->
@@ -74,10 +74,10 @@
                                     <img src="{{asset('img/icons/refresh-cw.png')}}" alt="Editar" class="btn-img">
                                 </a>
     
-                                <form class="delete d-line" action="/clientes/{{$cliente->id}}" method="POST" style="display: inline">
+                                <form action="/clientes/{{$cliente->id}}" class="delete d-line" method="POST" style="display: inline">
                                     @method('DELETE')
                                     @csrf
-                                    <button type="submit" class="btn btn-outline-light btn-sm boton">
+                                    <button type="submit" class="btn btn-outline-light btn-sm boton" onclick="return ConfirmDelete()">
                                         <img src="{{asset('img/icons/trash-2.png')}}" alt="Eliminar" class="btn-img">
                                     </button>
                                 </form> 
@@ -92,4 +92,22 @@
             {{$clientes->links()}}
           </div>
     </div>
+
+    <script>
+        function ConfirmDelete()
+        {
+            var respuesta = confirm("Esta seguro de eliminar este registro");
+
+            if (respuesta == true) 
+            {
+                return true;  
+            }
+            else
+            {
+                return false;
+            }
+        }
+    </script>
+
+    
 @endsection
