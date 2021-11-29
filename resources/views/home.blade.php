@@ -74,7 +74,6 @@
             }
             #perfil{
                 width: 100%;
-                border-radius: 50%
             }
             #tarjeta{
                 width: 50%;
@@ -163,7 +162,7 @@
 
             <div class="row">
                 <div class="col-5 p-3">
-                    <img src="{{asset('img/perfil.jpg')}}" alt="" id="perfil">
+                    <img src="{{asset('img/perfil-circulo.png')}}" alt="" id="perfil">
                 </div>
 
                 <div class="col">
