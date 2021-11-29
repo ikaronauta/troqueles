@@ -86,6 +86,10 @@
                 @endforeach
             </tbody>
           </table>
+
+          <div>
+            {{$troqueles->links()}}
+          </div>
     </div>
 
     <script>
